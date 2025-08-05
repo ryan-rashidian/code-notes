@@ -1,4 +1,6 @@
-"""Pg 5: A Pythonic Card Deck"""
+"""Chapter 1: The Python Data Model"""
+
+"""pg. 5: A Pythonic Card Deck"""
 
 import collections
 # collections.namedtuple() used to contruct class representation of cards
@@ -34,7 +36,7 @@ class FrenchDeck:
         """
         return self._cards[position]
 
-"""Pg 10: Emulating Numeric Types"""
+"""Pg. 10: Emulating Numeric Types"""
 
 import math
 
