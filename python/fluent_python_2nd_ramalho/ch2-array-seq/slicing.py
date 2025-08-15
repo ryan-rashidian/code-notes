@@ -3,9 +3,6 @@
 all sequence types in Python support slicing operations.
 """
 
-from warnings import warn
-
-
 def slice_object():
     """Demonstration of slicing and stepping.
 
