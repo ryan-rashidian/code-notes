@@ -1,6 +1,6 @@
 """pg. 90 Automatic Handling of Missing Keys"""
 
-from collections import defaultdict
+from collections import defaultdict, UserDict
 
 def missing_key_defaultdict():
     """pg. 90 defaultdict: Another Take on Missing Keys
@@ -22,6 +22,9 @@ class StrKeyDict0(dict):
 
     if __missing__ method is provided, dict.__getitem__ will call it,
     whenever a key is not found.
+
+    Here, inheriting from dict, a get() method must be defined for a default,
+    otherwise, undefined keys will raise an error.
     """
     def __missing__(self, key):
         if isinstance(key, str):
@@ -45,6 +48,36 @@ class StrKeyDict0(dict):
 
 def missing_key_test():
     d = StrKeyDict0([('2', 'two'), ('4', 'four')])
+    print(d['2'])
+    print(d['4'])
+    try:
+        print(d['1'])
+    except KeyError as e:
+        print(e)
+
+    print(d.get('2'))
+    print(d.get(4))
+    print(d.get(1))
+
+class StrKeyDict(UserDict):
+    # StrKeyDict0 inherits from UserDict
+    """Now, inheriting from UserDict, implementing __setitem__
+    """
+    def __missing__(self, key):
+        if isinstance(key, str):
+            raise KeyError
+        return self[str(key)]
+
+    def __contains__(self, key):
+        # check self.data instead of self.keys()
+        return str(key) in self.data
+
+    def __setitem__(self, key, item):
+        # converts any key into a str
+        self.data[str(key)] = item
+
+def missing_key_test2():
+    d = StrKeyDict([('2', 'two'), ('4', 'four')])
     print(d['2'])
     print(d['4'])
     try:
