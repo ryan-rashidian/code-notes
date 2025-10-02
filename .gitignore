@@ -1,16 +1,3 @@
-*.build/
-*.db
-*.dist/
-*.egg-info/
-*.env
-*.env.tmp
-*.py[cod]
-*.sqlite3
 __pycache__/
-bulk_data/
-build/
-cli.build/
-cli.dist/
-dist/
 .venv/
 
