@@ -16,10 +16,8 @@ int main()
     scanf("%d", &base_n);
 
     factorial = base_n;
-    int n = base_n - 1;
-    while (n > 0) {
+    for (int n = base_n - 1; n > 0; n--) {
         factorial *= n;
-        n--;
     }
 
     printf("Factorial of %d: %d\n", base_n, factorial);
