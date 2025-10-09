@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 
-int main()
+int main(void)
 {
     int hours, minutes;
     char indicator;

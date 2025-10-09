@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 
-int main()
+int main(void)
 {
     double x;
     double y = 1;

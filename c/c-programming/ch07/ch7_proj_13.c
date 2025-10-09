@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 
-int main()
+int main(void)
 {
     char ch;
     int words = 1, letters = 0;

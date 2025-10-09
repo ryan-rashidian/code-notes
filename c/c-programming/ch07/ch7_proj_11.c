@@ -9,7 +9,7 @@
 #include <stdio.h>
 
 
-int main()
+int main(void)
 {
     char first_initial;
     char ch;

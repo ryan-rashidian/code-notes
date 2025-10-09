@@ -8,7 +8,7 @@
 #include <stdio.h>
 
 
-int main()
+int main(void)
 {
     float x, y;
     char operator;
