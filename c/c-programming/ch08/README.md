@@ -57,10 +57,10 @@ for (i = 0; i < sizeof(a) / sizeof(a[0]); i++)
 - slightly better than using a macro, (no macro name to remember)
 
 ```
-#define SIZE ((int) (sizeof(a) / sizeof(a[0])))
+#define SIZE(a) ((int) (sizeof(a) / sizeof(a[0])))
 
-- Defining a macro can still be helpful for adding a parameter
 ```
+- Defining a macro can still be helpful for adding a parameter
 
 ## 8.2: Multidimensional Arrays
 
