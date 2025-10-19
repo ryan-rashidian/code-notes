@@ -53,7 +53,7 @@ the length of the array can be left unspecified:
 int f(int a[]) // no length specified
 ```
 
-If the function needs to know the length of a, we create a seconds argument:
+If the function needs to know the length of a, create a seconds argument:
 
 ```
 int sum_array(int a[], int n)
@@ -67,5 +67,41 @@ int sum_array(int a[], int n)
 }
 ```
 
+## 9.4: The `return` Statement
 
+A non-`void` function must use the return statement
+
+```
+return expression ;
+```
+
+The conditional operator can be used in the return expression
+
+```
+return n >= 0 ? n : 0;
+```
+
+## 9.5: Program Termination
+
+The `exit` function, from `<stdlib.h>`, can be used to end the program.
+
+- The argument passed to exit has the same meaning as the return value in main
+- `EXIT_SUCCESS` and `EXIT_FAILURE` are macros for 0 and 1 respectively
+
+## 9.6: Recursion
+
+A function is recursive if it calls itself.
+
+For example:
+
+```
+// compute n! recursively, using the formula n! = n * (n - 1)
+int fact(int n)
+{
+    if (n <= 1)
+        return 1;
+    else
+        return n * fact(n - 1)
+}
+```
 

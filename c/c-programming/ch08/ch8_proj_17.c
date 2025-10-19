@@ -1,7 +1,7 @@
 /* 
  *   File: ch8_proj_17.c
  * Author: Ryan Rashidian
- *   Date: 2025-10-13
+ *   Date: 2025-10-18
  *  Brief: Chapter 8 Project 17 - Magic square
  */
 
@@ -28,7 +28,7 @@ int main(void)
     int row = 0;
     int col = (size - 1) / 2;
 
-    for (int num = 2; num < (size * size) + 1; num++) {
+    for (int num = 1; num < (size * size) + 1; num++) {
         magic_square[row][col] = num;
 
         // Find next in-bound position
