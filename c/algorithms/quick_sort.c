@@ -1,29 +1,14 @@
-/* Sorts an array of integers using Quicksort algorithm */
+/* 
+ *   File: quick_sort.c
+ * Author: K. N. King (From C-Programming 2nd Edition: 9.2 pg. 207)
+ *   Date: 2025-11-09
+ *  Brief: Demonstration of the quick sort algorithm
+ */
 
-#include <stdio.h>
 
-#define N 10
+void quicksort(int [], int low, int high);
+int split(int [], int low, int high);
 
-void quicksort(int a[], int low, int high);
-int split(int a[], int low, int high);
-
-int main(void)
-{
-    int a[N], i;
-
-    printf("Enter %d numbers to be sorted: ", N);
-    for (i = 0; i < N; i++)
-        scanf("%d", &a[i]);
-
-    quicksort(a, 0, N - 1);
-
-    printf("In sorted order: ");
-    for (i = 0; i < N; i++)
-        printf("%d ", a[i]);
-    printf("\n");
-
-    return 0;
-}
 
 void quicksort(int a[], int low, int high)
 {
@@ -32,7 +17,7 @@ void quicksort(int a[], int low, int high)
     if (low >= high) return;
     middle = split(a, low, high);
     quicksort(a, low, middle - 1);
-    quicksort(a, middle - 1, high);
+    quicksort(a, middle + 1, high);
 }
 
 int split(int a[], int low, int high)
