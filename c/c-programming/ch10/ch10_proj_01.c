@@ -1,7 +1,7 @@
 /* 
  *   File: ch10_proj_01.c
  * Author: Ryan Rashidian
- *   Date: 2025-11-06
+ *   Date: 2025-11-09
  *  Brief: Chapter 10 Project 1 - Modify stack
  */
 
@@ -32,13 +32,13 @@ int main(void)
     while ((ch = getchar()) != '\n')
         if (ch == ')') {
             if (pop() != '(') {
-                printf("Parentheses/braces are not nested properly");
+                printf("Parentheses/braces are not nested properly\n");
                 return 0;
             }
         }
         else if (ch == '}') {
             if (pop() != '{') {
-                printf("Parentheses/braces are not nested properly");
+                printf("Parentheses/braces are not nested properly\n");
                 return 0;
             }
         }
@@ -94,13 +94,13 @@ char pop(void)
 
 void stack_overflow(void)
 {
-    printf("Stack overflow");
+    printf("Stack overflow\n");
     exit(EXIT_FAILURE);
 }
 
 
 void stack_underflow(void)
 {
-    printf("Parentheses/braces are nested properly");
+    printf("Parentheses/braces are nested properly\n");
 }
 
