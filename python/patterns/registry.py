@@ -1,4 +1,8 @@
-"""Registery design pattern example."""
+"""Demonstration of the registery design pattern.
+
+Credit to: YouTube - ArjanCodes
+This code was written while following along with a tutorial series
+"""
 
 from typing import Callable
 from functools import wraps
